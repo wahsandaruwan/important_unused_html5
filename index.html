@@ -173,9 +173,16 @@
 
     <!-- Script -->
     <script>
-        const tm = document.querySelector('template')
-        const cn = tm.content.cloneNode(true)
-        document.body.append(cn)
+        const template = document.querySelector('template')
+        const clone1 = template.content.cloneNode(true)
+        clone1.querySelector('h3').textContent = "How are you?"
+        clone1.querySelector('p').textContent = "Lorem Sample1"
+        document.body.append(clone1)
+
+        const clone2 = template.content.cloneNode(true)
+        clone2.querySelector('h3').textContent = "What is your name?"
+        clone2.querySelector('p').textContent = "Lorem Sample2"
+        document.body.append(clone2)
     </script>
 
 </body>
